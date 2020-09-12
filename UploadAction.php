@@ -14,6 +14,8 @@ use yii\web\UploadedFile;
 class UploadAction extends \budyaga\cropper\actions\UploadAction
 {
 
+    public $deleteOldImage = true;
+
     public function run()
     {
         if (Yii::$app->request->isPost) {
@@ -82,6 +84,10 @@ class UploadAction extends \budyaga\cropper\actions\UploadAction
     public function deleteOldImage($oldImage='')
     {
 
+        if (!$this->deleteOldImage){
+            return false;
+        }
+
         $array = explode('/', $oldImage);
         $last = count($array) - 1;
         $imageName = $array[$last];
@@ -89,8 +95,9 @@ class UploadAction extends \budyaga\cropper\actions\UploadAction
         $oldImagePath = $this->path.$imageName;
         if (is_file($oldImagePath)){
             unlink($oldImagePath);
+            return true;
         }
-        return $oldImagePath;
+        return false;
     }
 
 }
