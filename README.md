@@ -16,7 +16,7 @@ php composer.phar require odilov-sh/yii2-image-cropper "@dev"
 or add
 
 ```
-"     "odilov-sh/yii2-image-cropper": "@dev""
+"odilov-sh/yii2-image-cropper": "@dev"
 ```
 
 to the require section of your `composer.json` file.
