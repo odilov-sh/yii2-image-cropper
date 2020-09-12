@@ -2,7 +2,7 @@
     "name": "odilov-sh/yii2-image-cropper",
     "description": "Yii2 image cropper and with deleting old image",
     "type": "yii2-extension",
-  "minimum-stability": "dev",
+    "license": "BSD-3-Clause",
     "keywords": ["yii2","extension"],
     "authors": [
         {
@@ -11,7 +11,8 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "~2.0.0"
+        "yiisoft/yii2": "~2.0.0",
+        "budyaga/yii2-cropper": "*"
     },
     "autoload": {
         "psr-4": {

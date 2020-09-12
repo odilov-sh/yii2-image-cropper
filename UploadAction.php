@@ -4,7 +4,9 @@
 namespace odilov\cropper;
 
 
-class UploadAction
+class UploadAction extends \budyaga\cropper\actions\UploadAction
 {
+
+
 
 }
