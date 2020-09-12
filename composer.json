@@ -2,8 +2,8 @@
     "name": "odilov-sh/yii2-image-cropper",
     "description": "Yii2 image cropper and with deleting old image",
     "type": "yii2-extension",
+  "minimum-stability": "dev",
     "keywords": ["yii2","extension"],
-    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Shukurullo Odilov",
@@ -18,4 +18,5 @@
             "odilov\\cropper\\": ""
         }
     }
+  
 }
