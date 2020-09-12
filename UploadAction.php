@@ -26,8 +26,6 @@ class UploadAction extends \budyaga\cropper\actions\UploadAction
                 $oldImage =  Yii::$app->request->post('oldImage');
                 return $this->deleteOldImage($oldImage);
             }
-
-
             $file = UploadedFile::getInstanceByName($this->uploadParam);
             $model = new DynamicModel(compact($this->uploadParam));
             $model->addRule($this->uploadParam, 'image', [
