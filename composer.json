@@ -1,0 +1,21 @@
+{
+    "name": "odilov-sh/yii2-image-cropper",
+    "description": "Yii2 image cropper and with deleting old image",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Shukurullo Odilov",
+            "email": "shukurullo0321@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "odilov\\cropper\\": ""
+        }
+    }
+}
