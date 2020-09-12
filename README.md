@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist odilov/yii2-image-cropper "*"
+php composer.phar require odilov-sh/yii2-image-cropper "@dev"
 ```
 
 or add
 
 ```
-"odilov/yii2-image-cropper": "*"
+"     "odilov-sh/yii2-image-cropper": "@dev""
 ```
 
 to the require section of your `composer.json` file.
@@ -85,7 +85,7 @@ Action has following parameters:
 | height  | The final height of the image after cropping. It must match the value of a similar parameter of the widget. | 200    |No |
 | jpegQuality  | Quality of cropped image (JPG) | 100    |No |
 | pngCompressionLevel  | Quality of cropped image (PNG) | 1    |No |
-| deleteOlImage   | Whether delete old image after cropping new image or clicking "Delete image" button |  true   |   No
+| deleteOldImage   | Whether delete old image after cropping new image or clicking "Delete image" button |  true   |   No
 
 
 You can use this widget on frontend and backend. For example: user can change his userpic and administrator can change users userpic.
