@@ -1,6 +1,6 @@
 {
     "name": "odilov-sh/yii2-image-cropper",
-    "description": "Yii2 image cropper and with deleting old image",
+    "description": "Yii2 image cropper with deleting old image",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "keywords": ["yii2","extension"],
