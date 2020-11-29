@@ -6,7 +6,7 @@
                 $widget: $widget,
                 $progress: $progress,
                 $progress_bar: $progress.find('.progress-bar'),
-                $thumbnail: $widget.find('.thumbnail'),
+                $thumbnail: $widget.find('.image-thumb'),
                 $photo_field: $widget.find('.photo-field'),
                 $upload_new_photo: $widget.find('.upload-new-photo'),
                 $new_photo_area: $widget.find('.new-photo-area'),
@@ -160,9 +160,9 @@
                     // console.log($oldImage)
                     // console.log($url)
                     $.post($url, {oldImage: $oldImage, deleteOnly:true } , function(result){
-
+                        console.log($oldImage)
+                        console.log($url)
                         console.log(result)
-
                     } );
 
                 }

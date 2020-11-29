@@ -2,11 +2,14 @@
 /**
  * @var \yii\db\ActiveRecord $model
  * @var \budyaga\cropper\Widget $widget
+ * @var boolean $isBs4
  *
  */
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+
+$iconClass = $isBs4 ? 'fa' : 'glyphicon';
 
 ?>
 
@@ -21,20 +24,20 @@ use yii\helpers\Url;
             : $widget->noPhotoImage,
         [
             'style' => 'max-height: ' . $widget->thumbnailHeight . 'px; max-width: ' . $widget->thumbnailWidth . 'px',
-            'class' => 'thumbnail',
+            'class' => $isBs4 ? 'img-thumbnail mb-3 image-thumb' : 'thumbnail image-thumb',
             'data-no-photo' => $widget->noPhotoImage
         ]
     ); ?>
 
     <div class="cropper-buttons">
-        <button type="button" class="btn btn-sm btn-danger delete-photo" aria-label="<?= Yii::t('cropper', 'DELETE_PHOTO');?>">
-            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> <?= Yii::t('cropper', 'DELETE_PHOTO');?>
+        <button type="button" class="btn btn-xs btn-danger delete-photo" aria-label="<?= Yii::t('cropper', 'DELETE_PHOTO');?>">
+            <span class="<?= $iconClass ." ".$iconClass. "-trash-alt" ?>" aria-hidden="true"></span> <?= Yii::t('cropper', 'DELETE_PHOTO');?>
         </button>
-        <button type="button" class="btn btn-sm btn-success crop-photo hidden" aria-label="<?= Yii::t('cropper', 'CROP_PHOTO');?>">
-            <span class="glyphicon glyphicon-scissors" aria-hidden="true"></span> <?= Yii::t('cropper', 'CROP_PHOTO');?>
+        <button type="button" class="btn btn-xs btn-success crop-photo hidden" aria-label="<?= Yii::t('cropper', 'CROP_PHOTO');?>">
+            <span class="<?= $isBs4 ? 'fa fa-cut' : 'glyphicon glyphicon-scissors' ?>" aria-hidden="true"></span> <?= Yii::t('cropper', 'CROP_PHOTO');?>
         </button>
-        <button type="button" class="btn btn-sm btn-info upload-new-photo hidden" aria-label="<?= Yii::t('cropper', 'UPLOAD_ANOTHER_PHOTO');?>">
-            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> <?= Yii::t('cropper', 'UPLOAD_ANOTHER_PHOTO');?>
+        <button type="button" class="btn btn-xs btn-info upload-new-photo hidden" aria-label="<?= Yii::t('cropper', 'UPLOAD_ANOTHER_PHOTO');?>">
+            <span class="<?= $isBs4 ? 'fa fa-images' : 'glyphicon glyphicon-picture' ?>" aria-hidden="true"></span> <?= Yii::t('cropper', 'UPLOAD_ANOTHER_PHOTO');?>
         </button>
     </div>
 
@@ -43,6 +46,7 @@ use yii\helpers\Url;
             <span><?= $widget->label;?></span>
         </div>
     </div>
+    <div style="clear: both"></div>
     <div class="progress hidden" style="width: <?= $widget->cropAreaWidth; ?>px;">
         <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" style="width: 0%">
             <span class="sr-only"></span>
